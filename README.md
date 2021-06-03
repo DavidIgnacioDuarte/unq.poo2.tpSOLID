@@ -49,6 +49,8 @@ Violaciones a los principios SOLID detectadas:
 
 * **ClienteEmail** también viola por sí mismo el **Dependency Inversion Principle** debido a que en conjunto, su estado y comportamiento deberían implementar un protocolo en común para cada cliente de email; pudiendo solucionarse con una interfaz **IClienteEmail**.
 
+* A **ClienteEmail** le corresponden la responsabilidad de enviar y recibir mails, y de manejar el estado de estos borrándolos y/o contando cuántos hay. Esto viola el **Single Responsibility Principle**, y podría solucionarse planteando una clase que se encargue de lo primero, y otra que se encargue de lo segundo.
+
 
 
 
