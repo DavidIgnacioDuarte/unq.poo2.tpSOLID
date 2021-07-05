@@ -53,11 +53,19 @@ Violaciones a los principios SOLID detectadas:
 
 
 
+##Sistema Informático Bancario
+
+* Justifique por qué su modelo no viola los principios SOLID y marque cuáles desiciones tomó para que asi sea:
 
 
+Creo que mi modelo **no** viola los principios **SOLID**, cumpliendo con cada uno de la siguiente manera:
 
 
+1. **SRP:** Cada clase por sí misma tiene una única responsabilidad y razón de cambio. Por un lado, a **Banco** le corresponde simplemente la gestión del agregado de clientes, la solicitud de créditos de estos últimos, y el cálculo de su monto en base a las solicitudes aceptadas. Abarca sólo la lógica de negocio.Cada **Solicitud** cuenta con su respectivos datos de instancia, sabe responder a su monto y si la misma es aceptable en base al cliente. **PropiedadInmobiliaria** funciona como la garantía que es, teniendo una breve descripción y datos propios de la propiedad. Finalmente, a **Cliente** es a quien le corresponde saber su sueldo y cada uno de sus datos propios como persona física, fundamentales para ser usados en cada solicitud y para su información en el banco.
 
+2. **OCP:** Es posible extender el dominio en cuanto a las solicitudes de crédito debido a que **Banco** recibe una solicitud, esta última siendo una clase abstracta como base a seguir por nuevas a agregar.
 
+3. **LSP:** Cada clase que hereda de **SolicitudCredito** respeta el protocolo de esta última. **No** se cuenta con métodos inútiles en su extensión.
 
+4. Por último, este dominio no implementa interfaces de ningún tipo.
 

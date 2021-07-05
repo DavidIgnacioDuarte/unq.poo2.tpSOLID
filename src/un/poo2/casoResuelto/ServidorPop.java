@@ -3,7 +3,6 @@ package un.poo2.casoResuelto;
 import java.util.ArrayList;
 import java.util.List;
 
-import unq.poo2.caso1.Correo;
 
 public class ServidorPop implements IServidorPop {
 
@@ -21,7 +20,7 @@ public class ServidorPop implements IServidorPop {
 	}
 
 	public void enviar(Correo correo) {
-      //realiza lo necesario para enviar el correo.		
+      //implementa todo para enviar...	
 	}
 	
 }
